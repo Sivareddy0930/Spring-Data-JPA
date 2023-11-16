@@ -34,13 +34,7 @@ public class StudentsRestApi {
 
 	}
 
-//	@PostMapping("/insertAllRecords")
-//	public List insertAllRecords(@RequestBody List<Students> std) {
-//		
-//		
-//		 return  srp.saveAll(std);
-//
-//	}
+
 	
 	//-----------------------------------------------------------------------------------
 
