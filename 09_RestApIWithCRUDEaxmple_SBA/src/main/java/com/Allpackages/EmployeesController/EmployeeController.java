@@ -1,12 +1,14 @@
 package com.Allpackages.EmployeesController;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.Allpackages.EmployeesEntity.Employees;
@@ -19,6 +21,7 @@ public class EmployeeController {
 	EmployeesServiceImple esi;
 	
 	@PostMapping("/post")
+	@ResponseStatus(code=HttpStatus.CREATED)
 	public Employees postEmployee(@RequestBody Employees emp) {
 		
 		return esi.postEmployee(emp);
@@ -34,7 +37,7 @@ public class EmployeeController {
 	
 	@PutMapping("/put/{id}")
 	public Employees updateEmployee(@PathVariable Integer id,@RequestBody Employees emp) {
-		System.out.println(emp.getSalary());
+		
 		return esi.updateEmployee(id, emp) ;
 	}
 
