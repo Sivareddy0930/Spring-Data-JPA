@@ -70,4 +70,9 @@ public class OrdersController {
 		
 	}
 	
+	@GetMapping("/deleteAll")
+	public String deleteAll() {
+		return osi.deleteAll();
+	}
+	
 }

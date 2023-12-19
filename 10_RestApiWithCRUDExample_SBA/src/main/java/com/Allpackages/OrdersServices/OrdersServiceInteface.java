@@ -13,6 +13,7 @@ public interface OrdersServiceInteface {
 	public abstract String saveAllEmployees(List<EmployeesOrders> empl);
 	public abstract Long countEmployees();
 	public abstract Boolean existOrNot(Integer oid);
+	public abstract String deleteAll();
 	
 	
 }

@@ -80,6 +80,14 @@ public class OrdersServiceImple implements OrdersServiceInteface {
 	public Boolean existOrNot(Integer oid) {
 		return Orepo.existsById(oid);
 	}
+
+	@Override
+	public String deleteAll() {
+		
+		Orepo.deleteAll();
+		
+		return "successfully deleted all orders";
+	}
 	
 	
 }
